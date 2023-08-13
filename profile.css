@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins' ,sans-serif;
+    box-sizing: border-box;
+}
+
+/**** Sass Variables ****/
+$bodyFont: 'Open Sans', sans-serif;
+
+
+body {
+  font-family: $bodyFont;
+  background: #333;
+}
+
+.container {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 450px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+  
+  .card-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;
+  }
+  
+  &:hover img {
+    opacity: 0.4;
+    transition: .5s;
+  }
+}
+
+.card:hover .card-image {
+  transform: translateY(-100px);
+  transition: all .9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  
+  li {
+    list-style: none;
+    
+    a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #fff;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: .4s;
+      transform: translateY(200px);
+      opacity: 0;
+    } 
+  }
+}
+
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1; 
+}
+
+.social-icons li a:hover {
+  background: #000; 
+  transition: .2s;
+  .fab {
+    color: #fff;
+  } 
+}
+
+.social-icons li a .fab {
+  transition: .8s;
+    
+  &:hover {
+      transform: rotateY(360deg);
+      color: #fff;
+  } 
+}
+
+.card:hover li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #0f0e0e;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+
+  h2 {
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+     
+    .job-title {
+        font-size: 1rem;
+        line-height: 2.5rem;
+        color: #333;
+        font-weight: 300;
+    }
+  }
+}
+
+.jane {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  opacity: 0;
+  background: #0a0a0a;
+  width: 100%;
+  height: 120px;
+  z-index: 3;
+  padding: 10px;
+  transition: .4s;
+}
+
+.profile-two .social-icons li a {
+  border-radius: 50%;
+}
+
+.card:hover .profile-img--two {
+  transform: rotateY(180deg);
+}
+
+.card:hover .jane {
+  bottom: 0;
+  left: 0;
+  transition-delay: 0.5s;
+  opacity: 1;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+
+
+.hero{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+
+}
+#introVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+#homeVideo {
+    position: fixed;
+    right: 20;
+    bottom: 500;
+    min-width: 60%;
+    min-height: 50%;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    
+}
+nav a{
+    text-decoration: none;
+    transition: transform .4s;
+}
+nav a:hover{
+    transform: scale(1.1);
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+}
+nav ul li a:hover{
+    color: #f9004d;
+    transition: .4s;  
+    
+}
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+
+}
+.btn:hover{
+    transform: scale(1.2);
+}

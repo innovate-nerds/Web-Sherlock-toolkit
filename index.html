@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="IndexStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Data Pirets | Login</title>
+
+</head>
+<body>
+    
+    <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <header><b>Login</b></header>
+        </div>
+
+<!-- enter your user name and password -->
+        <div class="input-field">
+            <input type="text" class="input" placeholder="Username" id="">
+            <i class='bx bx-user' ></i>
+        </div>
+
+        <div class="input-field">
+            <input type="Password" class="input" placeholder="Password" id="">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+<!-- I agree to the terms of services -->
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> I agree to the terms of services</label>
+            </div>
+        </div>
+
+<!-- login button-->
+        <div class="input-field" onclick="location.href='indtroduction.html'">
+            <span>
+                <input type="submit" class="submit" value="Login" id="">
+            </span>
+        </div>
+
+<!-- Remember me and Foreget password  -->
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+            </div>
+            <div class="two">
+                <label><a href="forget_password.html"><font color="violet"><b>Forgot password?</b></font></a></label>
+            </div>
+        </div>
+
+<!-- Don't have any account ? SignUp -->
+        <div class="two-col">
+            <span>
+            <div class="one">
+               <label for="check">Don't have any account ?</label>
+            </div></span>
+            <span>
+            <div class="two">
+                <label><button onclick="document.location='signup.html'">SignUp</button></label>
+            </div></span>
+        
+        </div>
+
+
+        <!-- <div class="top">
+            <span>Don't have any account ?</span>   
+            <span><button onclick="document.location='signup.html'"><h3>SignUp</h3></button></span>
+        </div> -->
+
+
+    </div>
+</div>  
+</body>
+</html>
